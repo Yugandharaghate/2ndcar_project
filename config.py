@@ -6,4 +6,4 @@ MODEL_FILE_PATH = os.path.join("artifacts","linear_reg_model.pkl")
 
 JSON_FILE_PATH = os.path.join("artifacts","project_data.json")
 
-PORT_NUMBER = 5005
+PORT_NUMBER = 5003
