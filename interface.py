@@ -8,7 +8,8 @@ app = Flask(__name__)
 @app.route("/")
 def hello_flask():
     print("Welcome to Car Price Prediction")
-    return render_template("page.html")
+    # return "hello"
+    return render_template("index.html")
 
 @app.route("/predict_car_price", methods = ["POST", "GET"])
 def predict_car_price():
@@ -25,8 +26,8 @@ def predict_car_price():
 
         car2 = CarPricePred(Year, Present_Price, Kms_Driven, Fuel_Type, Seller_Type, Transmission, Owner)
         charges = car2.predict_price()
-        # wreturn jsonify({"Result" : f"Predicted Charges for Car is {charges}/- Rs. Only"})
-        return render_template("page.html", prediction = charges)
+        # return jsonify({"Result" : f"Predicted Charges for Car is {charges}/- Rs. Only"})
+        return render_template("index.html", prediction = charges)
 
 
     # if request.method == "GET":
